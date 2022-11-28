@@ -41,14 +41,14 @@
             this.btnMoins = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnComma = new System.Windows.Forms.Button();
-            this.btnSigneMoins = new System.Windows.Forms.Button();
-            this.textBoxInput = new System.Windows.Forms.TextBox();
+            this.plusMoinsbtn = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
-            this.btnCE = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.Label();
+            this.Mdlbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn2
@@ -88,9 +88,9 @@
             // 
             this.btnEgal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEgal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEgal.Location = new System.Drawing.Point(186, 411);
+            this.btnEgal.Location = new System.Drawing.Point(190, 411);
             this.btnEgal.Name = "btnEgal";
-            this.btnEgal.Size = new System.Drawing.Size(170, 59);
+            this.btnEgal.Size = new System.Drawing.Size(166, 59);
             this.btnEgal.TabIndex = 4;
             this.btnEgal.Text = "=";
             this.btnEgal.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@
             // btnComma
             // 
             this.btnComma.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnComma.Location = new System.Drawing.Point(101, 411);
+            this.btnComma.Location = new System.Drawing.Point(102, 409);
             this.btnComma.Name = "btnComma";
             this.btnComma.Size = new System.Drawing.Size(82, 59);
             this.btnComma.TabIndex = 13;
@@ -195,25 +195,25 @@
             this.btnComma.UseVisualStyleBackColor = true;
             this.btnComma.Click += new System.EventHandler(this.CommaClick);
             // 
-            // btnSigneMoins
+            // plusMoinsbtn
             // 
-            this.btnSigneMoins.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSigneMoins.Location = new System.Drawing.Point(14, 156);
-            this.btnSigneMoins.Name = "btnSigneMoins";
-            this.btnSigneMoins.Size = new System.Drawing.Size(82, 59);
-            this.btnSigneMoins.TabIndex = 14;
-            this.btnSigneMoins.Text = "DEL";
-            this.btnSigneMoins.UseVisualStyleBackColor = true;
-            this.btnSigneMoins.Click += new System.EventHandler(this.SigneMoins);
+            this.plusMoinsbtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.plusMoinsbtn.Location = new System.Drawing.Point(14, 156);
+            this.plusMoinsbtn.Name = "plusMoinsbtn";
+            this.plusMoinsbtn.Size = new System.Drawing.Size(82, 59);
+            this.plusMoinsbtn.TabIndex = 14;
+            this.plusMoinsbtn.Text = "+/-";
+            this.plusMoinsbtn.UseVisualStyleBackColor = true;
+            this.plusMoinsbtn.Click += new System.EventHandler(this.SigneMoins);
             // 
-            // textBoxInput
+            // textBox
             // 
-            this.textBoxInput.Location = new System.Drawing.Point(14, 101);
-            this.textBoxInput.Name = "textBoxInput";
-            this.textBoxInput.Size = new System.Drawing.Size(342, 27);
-            this.textBoxInput.TabIndex = 15;
-            this.textBoxInput.Text = "0";
-            this.textBoxInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox.Location = new System.Drawing.Point(14, 101);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(342, 27);
+            this.textBox.TabIndex = 15;
+            this.textBox.Text = "0";
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnDivision
             // 
@@ -236,17 +236,6 @@
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.Cclick);
-            // 
-            // btnCE
-            // 
-            this.btnCE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCE.Location = new System.Drawing.Point(101, 156);
-            this.btnCE.Name = "btnCE";
-            this.btnCE.Size = new System.Drawing.Size(82, 59);
-            this.btnCE.TabIndex = 17;
-            this.btnCE.Text = "CE";
-            this.btnCE.UseVisualStyleBackColor = true;
-            this.btnCE.Click += new System.EventHandler(this.CEclick);
             // 
             // btnZero
             // 
@@ -277,21 +266,31 @@
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.Size = new System.Drawing.Size(0, 20);
             this.textBoxResult.TabIndex = 21;
-            this.textBoxResult.Click += new System.EventHandler(this.resultClick);
+            // 
+            // Mdlbtn
+            // 
+            this.Mdlbtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Mdlbtn.Location = new System.Drawing.Point(102, 156);
+            this.Mdlbtn.Name = "Mdlbtn";
+            this.Mdlbtn.Size = new System.Drawing.Size(82, 59);
+            this.Mdlbtn.TabIndex = 22;
+            this.Mdlbtn.Text = "%";
+            this.Mdlbtn.UseVisualStyleBackColor = true;
+            this.Mdlbtn.Click += new System.EventHandler(this.mdlbtn);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 473);
+            this.Controls.Add(this.Mdlbtn);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.btnOne);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnC);
-            this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnZero);
-            this.Controls.Add(this.textBoxInput);
-            this.Controls.Add(this.btnSigneMoins);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.plusMoinsbtn);
             this.Controls.Add(this.btnComma);
             this.Controls.Add(this.btnProduit);
             this.Controls.Add(this.btnMoins);
@@ -330,14 +329,15 @@
         private Button btnMoins;
         private Button btnPlus;
         private Button btnComma;
-        private Button btnSigneMoins;
-        private TextBox textBoxInput;
+        private Button plusMoinsbtn;
+        private TextBox textBox;
         private Button btnDivision;
         private Button btnC;
-        private Button btnCE;
-        private Button button4;
+       
+       
         private Button btnOne;
         private Label textBoxResult;
         private Button btnZero;
+        private Button Mdlbtn;
     }
 }
