@@ -215,7 +215,7 @@ namespace Calculator
 
         private void mdlbtn(object sender, EventArgs e)
         {
-            valueFirst = decimal.Parse(textBox.Text);
+            valueFirst = decimal.Parse(textBox.Text);    
             textBox.Clear();
             operators = "%";
         }
