@@ -49,6 +49,7 @@
             this.btnOne = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.Label();
             this.Mdlbtn = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn2
@@ -278,11 +279,22 @@
             this.Mdlbtn.UseVisualStyleBackColor = true;
             this.Mdlbtn.Click += new System.EventHandler(this.mdlbtn);
             // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label.Location = new System.Drawing.Point(22, 51);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 20);
+            this.label.TabIndex = 23;
+            this.label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 473);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.Mdlbtn);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.btnOne);
@@ -308,6 +320,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Click += new System.EventHandler(this.btnEgal_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.form_Calcul_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +352,6 @@
         private Label textBoxResult;
         private Button btnZero;
         private Button Mdlbtn;
+        private Label label;
     }
 }

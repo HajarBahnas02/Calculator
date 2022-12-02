@@ -10,6 +10,8 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private List<Button> buttons = new List<Button>();
+
         private void ZeroClick(object sender, EventArgs e)
         {
             if (textBox.Text == "0")
@@ -134,6 +136,7 @@ namespace Calculator
             valueFirst = decimal.Parse(textBox.Text);
             textBox.Clear();
             operators = "+";
+            label.Text = valueFirst.ToString()   +   "+"    ;
         }       
 
         private void Cclick(object sender, EventArgs e)
@@ -155,7 +158,7 @@ namespace Calculator
           valueFirst = decimal.Parse(textBox.Text);
             textBox.Clear();
             operators = "-";
-
+            label.Text = valueFirst.ToString()  +   "-";
         }
 
         private void ProdClick(object sender, EventArgs e)
@@ -163,6 +166,7 @@ namespace Calculator
             valueFirst = decimal.Parse(textBox.Text);
             textBox.Clear();
             operators = "*";
+            label.Text = valueFirst.ToString()   +   "*";
         }
 
         private void DivClick(object sender, EventArgs e)
@@ -170,17 +174,20 @@ namespace Calculator
             valueFirst = decimal.Parse(textBox.Text);
             textBox.Clear();
             operators = "/";
+            label.Text = valueFirst.ToString()   +   "/";
         }
 
         private void btnEgal_Click(object sender, EventArgs e)
         {
-            
+           
             switch (operators)
             {
                 case "+":
                     valueSecond = decimal.Parse(textBox.Text);
                     Result=valueFirst+ valueSecond;
-                    textBox.Text = Result.ToString();
+                    textBox.Text = Result.ToString(); 
+                  
+             
                     break;
                 case "-":
                     valueSecond = decimal.Parse(textBox.Text);
@@ -196,7 +203,9 @@ namespace Calculator
                     textBox.Text = Result.ToString(); break;
                 default:
                     break;
+
             }
+            label.Text = label.Text   +   valueSecond.ToString()   + "=";
 
         }
 
@@ -215,9 +224,29 @@ namespace Calculator
 
         private void mdlbtn(object sender, EventArgs e)
         {
-            valueFirst = decimal.Parse(textBox.Text);
+            valueFirst = decimal.Parse(textBox.Text);    
             textBox.Clear();
             operators = "%";
+
+            label.Text = valueFirst.ToString() +"%";
+        }
+
+        private void form_Calcul_KeyPress(object sender, KeyPressEventArgs e)
+        {
+ 
+                foreach (Button button in buttons)
+                {
+                    if (char.ToString(e.KeyChar) == button.Text)
+                    {
+                        button.PerformClick();
+                    }
+
+                }
+            if (char.ToString(e.KeyChar) == "c")
+            {
+                btnC.PerformClick();
+            }
+          
         }
     }
 }
